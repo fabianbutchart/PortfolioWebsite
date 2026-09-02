@@ -49,5 +49,9 @@ def about():
 def sitemap():
     return send_from_directory('static', 'sitemap.xml', mimetype='application/xml')
 
+@app.route('/robots.txt')
+def robots():
+    return send_from_directory('static', 'robots.txt', mimetype='text/plain')
+
 if __name__ == '__main__':
     app.run()
